@@ -1,0 +1,31 @@
+/* Definition des variables */
+/* Couleurs*/
+$primary-color: #fccc44;
+$secondary-color: #569c84;
+
+$color-m1-back: #fcdfdb;
+$color-m1-1: #F50057;
+$color-m1-2: #FFE082;
+
+$color-m2-back: #fff5fe;
+$color-m2-1: #EF6C00;
+$color-m2-2: #BA68C8;
+$color-m2-3: #5C6BC0;
+
+$color-m3-back: #f9f9f9;
+$color-m3-1: #3949AB;
+$color-m3-2: #1976D2;
+$color-m3-3: #03A9F4;
+
+$color-m4-back: #fdfffd;
+$color-m4-1: #2E7D32;
+$color-m4-2: #4CAF50;
+$color-m4-3: #B2FF59;
+
+/* Ombres menus*/
+$menu-umber: 1px 1px 12px #BDBDBD;
+
+/*Animation "prochainement" */
+$num-points: 3;
+$anim-dur: 1900ms;
+$anim-delay: $anim-dur / $num-points;

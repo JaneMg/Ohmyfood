@@ -1,0 +1,49 @@
+/* ---------------------------------------- */
+/* ==            FOOTER                 */
+/*---------------------------------------- */
+.footing {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    @include principal-style;
+
+    &__box {
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        height:55px;
+        align-items: center;
+    }
+
+    &__button {
+        font-family: 'Roboto-Black', Arial, "Arial black", Impact, sans-serif;
+        text-decoration: none;
+        font-size: 1.2em;
+        animation: wiggle 2500ms infinite;
+    }
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    80% {
+        transform: rotate(0deg);
+    }
+
+    85% {
+        transform: rotate(4deg);
+    }
+
+    95% {
+        transform: rotate(-4deg);
+    }
+
+    0% {
+        transform: rotate(0deg);
+    }
+}
+

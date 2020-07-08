@@ -1,0 +1,19 @@
+/* ---------------------------------------- */
+/* ==            HEADER                */
+/*---------------------------------------- */
+/*     Logo      */
+.heading {
+    width: 100%;
+    margin-bottom: 10px;
+    @include principal-style;
+
+    &__title {
+        display: flex;
+        justify-content: center;
+        font-family: 'Roboto-Black', Arial, "Arial black", Impact, sans-serif;
+        padding: 20px 0 20px 0;
+        font-size: 2.5em;
+        font-weight: bold;
+        text-decoration: none;
+    }
+}

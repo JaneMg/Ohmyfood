@@ -1,0 +1,50 @@
+/*     Bouton - Prochainement 		*/
+.button {
+    font-family: 'Roboto-Black', Arial, "Arial black", Impact, sans-serif;
+    @include principal-style;
+    border: none;
+
+    &--points {
+        font-size: 1.6em;
+        padding: 7px 23px;
+        border-radius: 10px;
+        margin: 15px auto 80px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+}
+
+
+@keyframes points {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.load {
+    display: flex;
+    justify-content: space-around;
+    width: 30px;
+    margin-left: 10px;
+
+
+    &__point {
+        width: 5px;
+        height: 5px;
+        background: $primary-color;
+        border-radius: 100%;
+        animation: points $anim-dur both infinite ease-in-out alternate;
+
+        @for $i from 1 through $num-points {
+            &--#{$i} {
+                animation-delay: $anim-delay * $i;
+            }
+        }
+    }
+}

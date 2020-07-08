@@ -1,0 +1,41 @@
+/* Definition des mixins */
+@mixin principal-style {
+    color: $primary-color;
+    background: $secondary-color;
+}
+
+@mixin degrade-m1 {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(left, $color-m1-1, $color-m1-2);
+}
+
+@mixin degrade-m2 {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(left, $color-m2-1, $color-m2-2, $color-m2-3);
+}
+
+@mixin degrade-m3 {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(left, $color-m3-1, $color-m3-2, $color-m3-3 );
+}
+
+@mixin degrade-m4 {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(left, $color-m4-1, $color-m4-2, $color-m4-3 );
+}
+
+@mixin underline ($color){
+    border-bottom: 2px $color solid;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: left;
+    transition: all 800ms ease-in;
+    width: 0%;
+    height: 100%;
+}

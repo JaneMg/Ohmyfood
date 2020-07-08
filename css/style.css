@@ -1,0 +1,604 @@
+@charset "UTF-8";
+/* ---------------------------------------- */
+/* ==            SUMMARY              */
+/*---------------------------------------- */
+/* L		- 1 - */
+/* L		- 2 - */
+/* L		- 3 - */
+/* ---------------------------------------- */
+/* ==       COLOR CODES           */
+/*---------------------------------------- */
+/*
+Yellow -ohmyfood / primary-color :		#fccc44
+Green -header + footer /secondary-color:	#569c84
+
+Mid gray (visited links) :	#0006a1
+Light gray (h2) :		#747474
+*/
+/* ---------------------------------------- */
+/* == DEFINITIONS DES POLICES*/
+/*---------------------------------------- */
+@font-face {
+  /* Polices utilisee pour le logo */
+  font-family: "Roboto-Black";
+  src: url("fonts/Roboto-Black.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  /* Police utilisee pour le menu 1 : la note enchantee */
+  font-family: "Devonshire-Regular";
+  src: url("../fonts/Devonshire-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  /* Police utilisee pour le menu 2 : Le chic a la francaise  */
+  font-family: "LobsterTwo-Regular";
+  src: url("../fonts/LobsterTwo-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  /* Police utilisee pour le menu 3: Le delices des papilles  */
+  font-family: "DancingScript";
+  src: url("../fonts/DancingScript-VariableFont_wght.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  /* Police utilisee pour le menu 4: La palette du gout  */
+  font-family: "KaushanScript-Regular";
+  src: url("../fonts/KaushanScript-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  /* Police utilisee pour le contenues menus 1, 3 et 4 */
+  font-family: "PatrickHand-Regular";
+  src: url("../fonts/PatrickHand-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Definition des variables */
+/* Couleurs*/
+/* Ombres menus*/
+/*Animation "prochainement" */
+/* Definition des mixins */
+/*     Bouton - Prochainement 		*/
+.button {
+  font-family: "Roboto-Black", Arial, "Arial black", Impact, sans-serif;
+  color: #fccc44;
+  background: #569c84;
+  border: none;
+}
+.button--points {
+  font-size: 1.6em;
+  padding: 7px 23px;
+  border-radius: 10px;
+  margin: 15px auto 80px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+@keyframes points {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.load {
+  display: flex;
+  justify-content: space-around;
+  width: 30px;
+  margin-left: 10px;
+}
+.load__point {
+  width: 5px;
+  height: 5px;
+  background: #fccc44;
+  border-radius: 100%;
+  animation: points 1900ms both infinite ease-in-out alternate;
+}
+.load__point--1 {
+  animation-delay: 633.3333333333ms;
+}
+.load__point--2 {
+  animation-delay: 1266.6666666667ms;
+}
+.load__point--3 {
+  animation-delay: 1900ms;
+}
+
+/* ---------------------------------------- */
+/* ==            HEADER                */
+/*---------------------------------------- */
+/*     Logo      */
+.heading {
+  width: 100%;
+  margin-bottom: 10px;
+  color: #fccc44;
+  background: #569c84;
+}
+.heading__title {
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto-Black", Arial, "Arial black", Impact, sans-serif;
+  padding: 20px 0 20px 0;
+  font-size: 2.5em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* ---------------------------------------- */
+/* ==            FOOTER                 */
+/*---------------------------------------- */
+.footing {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  color: #fccc44;
+  background: #569c84;
+}
+.footing__box {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  height: 55px;
+  align-items: center;
+}
+.footing__button {
+  font-family: "Roboto-Black", Arial, "Arial black", Impact, sans-serif;
+  text-decoration: none;
+  font-size: 1.2em;
+  animation: wiggle 2500ms infinite;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  85% {
+    transform: rotate(4deg);
+  }
+  95% {
+    transform: rotate(-4deg);
+  }
+  0% {
+    transform: rotate(0deg);
+  }
+}
+/* ---------------------------------------- */
+/* == ELEMENTS PRINCIPAUX */
+/*---------------------------------------- */
+.block {
+  width: 100%;
+  margin: 0;
+}
+
+/* ---------------------------------------- */
+/* ==            PAGE D'ACCUEIL              */
+/*---------------------------------------- */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.menu {
+  text-align: center;
+  box-shadow: 1px 1px 12px #BDBDBD;
+  width: 230px;
+  height: 320px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu__zoom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  opacity: 1;
+  transition: transform 900ms;
+  align-items: center;
+}
+.menu__zoom:hover {
+  transform: scale(1.17);
+  opacity: 0.7;
+}
+.menu--1 {
+  background-color: #fcdfdb;
+}
+.menu--1 i {
+  font-size: 1.7em;
+  width: 51px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-linear-gradient(left, #F50057, #FFE082);
+}
+.menu--2 {
+  background-color: #fff5fe;
+}
+.menu--3 {
+  background-color: #f9f9f9;
+}
+.menu--4 {
+  background-color: #fdfffd;
+}
+.menu__title {
+  font-weight: normal;
+  text-align: center;
+}
+.menu__title--1 {
+  font-family: "Devonshire-Regular", Arial, "Arial black", Impact, sans-serif;
+  color: black;
+  font-weight: initial;
+}
+.menu__title--1-page {
+  margin-top: 10px;
+}
+.menu__title--2 {
+  font-family: LobsterTwo-Regular, Arial, "Arial black", Impact, sans-serif;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-linear-gradient(left, #EF6C00, #BA68C8, #5C6BC0);
+}
+.menu__title--3 {
+  font-family: "DancingScript", Arial, "Arial black", Impact, sans-serif;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-linear-gradient(left, #3949AB, #1976D2, #03A9F4);
+}
+.menu__title--4 {
+  font-family: "KaushanScript-Regular", Arial, "Arial black", Impact, sans-serif;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-linear-gradient(left, #2E7D32, #4CAF50, #B2FF59);
+}
+.menu__link {
+  text-decoration: none;
+  font-family: "PatrickHand-Regular", Arial, "Arial black", Impact, sans-serif;
+  font-style: italic;
+}
+.menu__link--1 {
+  color: black;
+  font-weight: bold;
+}
+.menu__link--2 {
+  color: #EF6C00;
+  font-family: "Times New Roman", Times, serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.menu__link--3 {
+  color: #1976D2;
+}
+.menu__link--4 {
+  color: #4CAF50;
+}
+
+/* ---------------------------------------- */
+/* == PAGES des menus */
+/*---------------------------------------- */
+.page__title {
+  text-align: center;
+  font-family: "Roboto-Black", Arial, "Arial black", Impact, sans-serif;
+}
+
+.menu__page {
+  width: 80%;
+  margin: auto auto 80px auto;
+  box-shadow: 1px 1px 12px #BDBDBD;
+  padding: 10px;
+}
+.menu__page--title {
+  text-align: center;
+  width: 90%;
+  font-size: 2.1em;
+  font-weight: initial;
+  margin: 30px auto 30px auto;
+}
+.menu__page--title-1 {
+  margin: 30px auto 30px auto;
+  font-size: 1.7em;
+}
+.menu__page--title-end {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.2em;
+  text-align: center;
+  align-items: center;
+  max-width: 50%;
+  margin: auto;
+}
+.menu__page--2 {
+  font-family: "Times New Roman";
+}
+.menu__page--others {
+  font-family: PatrickHand-Regular, Arial, "Arial black", Impact, sans-serif;
+}
+
+/* Contenu menu 1, 2, 3 et 4*/
+.categories {
+  margin-bottom: 15px;
+}
+.categories__plates {
+  display: flex;
+  justify-content: space-between;
+}
+.categories__plates--m2-1 {
+  color: #EF6C00;
+}
+.categories__plates--m2-2 {
+  color: #BA68C8;
+}
+.categories__plates--m2-3 {
+  color: #5C6BC0;
+}
+.categories__plates--left {
+  width: 88%;
+}
+.categories__plates--right {
+  font-weight: bold;
+}
+.categories__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.categories__title--element {
+  width: auto;
+  text-align: center;
+  position: relative;
+}
+.categories__title--decoration {
+  width: 30%;
+}
+.categories__title--decoration-img {
+  width: 100%;
+}
+.categories__2 {
+  font-weight: bold;
+}
+.categories__2--1 {
+  color: #EF6C00;
+}
+.categories__2--2 {
+  color: #BA68C8;
+}
+.categories__2--3 {
+  color: #5C6BC0;
+}
+
+/*Définition des titres des catégories de menu et animations soulignages*/
+.name {
+  transition: all ease-in-out;
+}
+.name--m1::before {
+  border-bottom: 2px black solid;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: left;
+  transition: all 800ms ease-in;
+  width: 0%;
+  height: 100%;
+}
+.name:hover::before {
+  width: 100%;
+}
+.name--m2-1 {
+  color: #EF6C00;
+}
+.name--m2-1::before {
+  border-bottom: 2px #EF6C00 solid;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: left;
+  transition: all 800ms ease-in;
+  width: 0%;
+  height: 100%;
+}
+.name--m2-2 {
+  color: #BA68C8;
+}
+.name--m2-2::before {
+  border-bottom: 2px #BA68C8 solid;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: left;
+  transition: all 800ms ease-in;
+  width: 0%;
+  height: 100%;
+}
+.name--m2-3 {
+  color: #5C6BC0;
+}
+.name--m2-3::before {
+  border-bottom: 2px #5C6BC0 solid;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: left;
+  transition: all 800ms ease-in;
+  width: 0%;
+  height: 100%;
+}
+.name--m3-1::before {
+  border-bottom: 2px #3949AB solid;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: left;
+  transition: all 800ms ease-in;
+  width: 0%;
+  height: 100%;
+}
+.name--m3-2::before {
+  border-bottom: 2px #1976D2 solid;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: left;
+  transition: all 800ms ease-in;
+  width: 0%;
+  height: 100%;
+}
+.name--m3 {
+  font-weight: initial;
+}
+.name--m3-3::before {
+  border-bottom: 2px #03A9F4 solid;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: left;
+  transition: all 800ms ease-in;
+  width: 0%;
+  height: 100%;
+}
+.name--m4 {
+  font-weight: initial;
+}
+.name--m4::before {
+  border-bottom: 2px #4CAF50 solid;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: left;
+  transition: all 800ms ease-in;
+  width: 0%;
+  height: 100%;
+}
+
+/* Définition des réglages : décorations latérales des catégories de menu*/
+.decoration {
+  width: 30%;
+  height: 8px;
+}
+.decoration__left {
+  clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 50%);
+}
+.decoration__left-1 {
+  background-color: #EF6C00;
+}
+.decoration__left-2 {
+  background-color: #BA68C8;
+}
+.decoration__left-3 {
+  background-color: #5C6BC0;
+}
+.decoration__right {
+  clip-path: polygon(10% 0%, 100% 50%, 10% 100%, 0% 50%);
+}
+.decoration__right-1 {
+  background-color: #EF6C00;
+}
+.decoration__right-2 {
+  background-color: #BA68C8;
+}
+.decoration__right-3 {
+  background-color: #5C6BC0;
+}
+
+/* ---------------------------------------- */
+/* ==       MEDIAS QUERIS        */
+/*---------------------------------------- */
+/*     VERSION TABLETTE      */
+@media all and (min-width: 768px) {
+  /* Page d'accueil */
+  .container {
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+
+  .menu {
+    width: 276px;
+    height: 384px;
+    margin: 30px;
+  }
+
+  .button--points {
+    font-size: 2.2em;
+    margin: 15px auto 110px auto;
+    padding: 12px 35px;
+  }
+
+  .footing__button {
+    font-size: 1.7em;
+  }
+
+  /* Pages menus */
+  .menu__page {
+    margin: auto auto 150px auto;
+    width: 70%;
+    max-width: 750px;
+    padding: 45px;
+  }
+  .menu__page--title {
+    width: 50%;
+  }
+
+  .heading {
+    margin-bottom: 50px;
+  }
+  .heading__title {
+    font-size: 3em;
+  }
+
+  .name {
+    font-size: 1.4em;
+  }
+
+  .footing {
+    /*width: 96%;
+    padding: 2%;*/
+  }
+  .footing__box {
+    height: 85px;
+  }
+}
+/*     VERSION DESKTOP      */
+@media all and (min-width: 992px) {
+  /* Page d'accueil */
+  .menu {
+    width: 322px;
+    height: 448px;
+    margin: 45px;
+  }
+
+  .menu__title, .menu__link {
+    font-size: 1.9em;
+  }
+
+  .button--points {
+    margin: 15px auto 140px auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
