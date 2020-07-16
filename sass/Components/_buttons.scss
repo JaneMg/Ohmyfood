@@ -2,10 +2,11 @@
 .button {
     font-family: 'Roboto-Black', Arial, "Arial black", Impact, sans-serif;
     @include principal-style;
-    border: none;
+
 
     &--points {
         font-size: 1.6em;
+        width: 213px; 
         padding: 7px 23px;
         border-radius: 10px;
         margin: 15px auto 80px auto;

@@ -202,6 +202,7 @@ Light gray (h2) :		#747474
 }
 
 /* Contenu menu 1, 2, 3 et 4*/
+/* Titres des catégories et plats */
 
 .categories {
 	margin-bottom: 15px;
@@ -221,7 +222,7 @@ Light gray (h2) :		#747474
 			}
 		}
 		&--left {
-			width: 88%;
+			width: 87%;
 		}
 		&--right {
 			font-weight: bold;
@@ -330,7 +331,7 @@ Light gray (h2) :		#747474
 
 
 
-/* Définition des réglages : décorations latérales des catégories de menu*/
+/* Définition des réglages : décorations latérales des catégories du menu 2: Le chic à la française*/
 
 .decoration {
 	width: 30%;
@@ -367,6 +368,14 @@ Light gray (h2) :		#747474
 	}
 }
 
+/* ---------------------------------------- */
+/* ==            PAGE MENTIONS LEGALES      */
+/*---------------------------------------- */
+.mentions {
+	width: 80%;
+	margin: auto;
+}
+
 
 /* ---------------------------------------- */
 /* ==       MEDIAS QUERIS        */
@@ -393,6 +402,7 @@ Light gray (h2) :		#747474
 		font-size: 2.2em;
 		margin: 15px auto 110px auto;
 		padding: 12px 35px;
+		width: 277px;
 	}
 
 	.footing__button {
@@ -447,6 +457,7 @@ Light gray (h2) :		#747474
 
 	.button--points {
 		margin: 15px auto 140px auto;
+		
 	}
 
 	
