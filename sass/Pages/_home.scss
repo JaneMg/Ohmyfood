@@ -1,0 +1,126 @@
+/* ---------------------------------------- */
+/* == ELEMENTS PRINCIPAUX */
+/*---------------------------------------- */
+.block {
+    width: 100%;
+    margin: 0;
+}
+
+
+/* ---------------------------------------- */
+/* ==            PAGE D'ACCUEIL              */
+/*---------------------------------------- */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.menu {
+    text-align: center;
+    box-shadow: $menu-umber;
+    width: 230px;
+    height: 320px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    &__zoom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        opacity: 1;
+        transition: transform 900ms;
+        align-items: center;
+
+        &:hover {
+            transform: scale(1.17);
+            opacity: 0.7;
+        }
+    }
+
+
+    &--1 {
+        background-color: $color-m1-back;
+
+        i {
+            font-size: 1.7em;
+            width: 51px;
+            @include degrade-m1;
+        }
+    }
+
+    &--2 {
+        background-color: $color-m2-back;
+    }
+
+    &--3 {
+        background-color: $color-m3-back;
+    }
+
+    &--4 {
+        background-color: $color-m4-back;
+    }
+
+
+    &__title {
+        font-weight: normal;
+        text-align: center;
+
+        &--1 {
+            font-family: 'Devonshire-Regular', Arial, "Arial black", Impact, sans-serif;
+            color: black;
+            font-weight: initial;
+
+            &-page {
+                margin-top: 10px;
+            }
+        }
+
+        &--2 {
+            font-family: LobsterTwo-Regular, Arial, "Arial black", Impact, sans-serif;
+            @include degrade-m2;
+        }
+
+        &--3 {
+            font-family: 'DancingScript', Arial, "Arial black", Impact, sans-serif;
+            @include degrade-m3;
+        }
+
+        &--4 {
+            font-family: 'KaushanScript-Regular', Arial, "Arial black", Impact, sans-serif;
+            @include degrade-m4;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        font-family: 'PatrickHand-Regular', Arial, "Arial black", Impact, sans-serif;
+        font-style: italic;
+
+        &--1 {
+            color: black;
+            font-weight: bold;
+        }
+
+        &--2 {
+            color: $color-m2-1;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: normal;
+            font-weight: bold;
+        }
+
+        &--3 {
+            color: $color-m3-2;
+        }
+
+        &--4 {
+            color: $color-m4-2;
+        }
+    }
+}

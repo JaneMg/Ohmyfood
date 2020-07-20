@@ -1,0 +1,225 @@
+/* ---------------------------------------- */
+/* == PAGES des menus */
+/*---------------------------------------- */
+
+.page__title {
+    text-align: center;
+    font-family: 'Roboto-Black', Arial, "Arial black", Impact, sans-serif;
+}
+
+.menu__page {
+    width: 80%;
+    margin: auto auto 80px auto;
+    box-shadow: $menu-umber;
+    padding: 10px;
+
+    &--title {
+        text-align: center;
+        width: 90%;
+        font-size: 2.1em;
+        font-weight: initial;
+        margin: 30px auto 30px auto;
+
+        &-1 {
+            margin: 30px auto 30px auto;
+            font-size: 1.7em;
+        }
+
+        &-end {
+            display: flex;
+            justify-content: space-around;
+            font-size: 1.2em;
+            text-align: center;
+            align-items: center;
+            max-width: 50%;
+            margin: auto;
+        }
+    }
+
+    &--2 {
+        font-family: 'Times New Roman';
+    }
+
+    &--others {
+        font-family: PatrickHand-Regular, Arial, "Arial black", Impact, sans-serif;
+    }
+}
+
+/* Contenu menu 1, 2, 3 et 4*/
+/* Titres des categories et plats */
+
+.categories {
+    margin-bottom: 15px;
+
+    &__plates {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        &--m2 {
+            &-1 {
+                color: $color-m2-1
+            }
+
+            &-2 {
+                color: $color-m2-2;
+            }
+
+            &-3 {
+                color: $color-m2-3;
+            }
+        }
+
+        &--left {
+            width: 87%;
+        }
+
+        &--right {
+            font-weight: bold;
+        }
+    }
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &--element {
+            width: auto;
+            text-align: center;
+            position: relative;
+        }
+
+        &--decoration {
+            width: 30%;
+
+            &-img {
+                width: 100%;
+            }
+        }
+    }
+
+    &__2 {
+        font-weight: bold;
+
+        &--1 {
+            color: $color-m2-1;
+        }
+
+        &--2 {
+            color: $color-m2-2
+        }
+
+        &--3 {
+            color: $color-m2-3;
+        }
+    }
+}
+
+/*Définition des titres des catégories de menu et animations soulignages*/
+.name {
+    transition: all ease-in-out;
+
+    &--m1::before {
+        @include underline(black);
+    }
+
+    &:hover::before {
+        width: 100%;
+    }
+
+
+    &--m2-1 {
+        color: $color-m2-1;
+    }
+
+    &--m2-1::before {
+        @include underline ($color-m2-1);
+    }
+
+    &--m2-2 {
+        color: $color-m2-2
+    }
+
+    &--m2-2::before {
+        @include underline ($color-m2-2);
+    }
+
+    &--m2-3 {
+        color: $color-m2-3;
+    }
+
+    &--m2-3::before {
+        @include underline($color-m2-3);
+    }
+
+
+    &--m3-1::before {
+        @include underline ($color-m3-1);
+    }
+
+    &--m3-2::before {
+        @include underline ($color-m3-2);
+    }
+
+    &--m3 {
+        font-weight: initial;
+    }
+
+    &--m3-3::before {
+
+        @include underline($color-m3-3);
+    }
+
+    &--m4 {
+        font-weight: initial;
+    }
+
+    &--m4::before {
+
+        @include underline($color-m4-2);
+    }
+}
+
+
+
+/* Définition des réglages : décorations latérales des catégories du menu 2: Le chic à la française*/
+
+.decoration {
+    width: 30%;
+    height: 8px;
+
+    &__left {
+        clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 50%);
+
+        &-1 {
+            background-color: $color-m2-1;
+        }
+
+        &-2 {
+            background-color: $color-m2-2;
+        }
+
+        &-3 {
+            background-color: $color-m2-3;
+        }
+    }
+
+    &__right {
+        clip-path: polygon(10% 0%, 100% 50%, 10% 100%, 0% 50%);
+
+        &-1 {
+            background-color: $color-m2-1;
+        }
+
+        &-2 {
+            background-color: $color-m2-2;
+        }
+
+        &-3 {
+            background-color: $color-m2-3;
+        }
+    }
+}

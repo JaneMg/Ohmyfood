@@ -1,8 +1,6 @@
 {
   "ExpandedNodes": [
     "",
-    "\\css",
-    "\\fonts",
     "\\sass",
     "\\sass\\Base",
     "\\sass\\Components",
@@ -10,6 +8,6 @@
     "\\sass\\Pages",
     "\\sass\\Utils"
   ],
-  "SelectedNode": "\\mentions-legales.html",
+  "SelectedNode": "\\sass\\Pages\\_menu-pages.scss",
   "PreviewInSolutionExplorer": false
 }

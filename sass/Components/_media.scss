@@ -1,0 +1,96 @@
+/* ---------------------------------------- */
+/* ==       MEDIAS QUERIS        */
+/*---------------------------------------- */
+
+/*     VERSION TABLETTE      */
+@media all and (min-width: 768px) {
+    /* Page d'accueil */
+    .container {
+        flex-direction: row;
+        justify-content: center;
+        width: 90%;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+
+    .menu {
+        width: 276px;
+        height: 384px;
+        margin: 30px;
+    }
+
+    .button--points {
+        font-size: 2.2em;
+        margin: 15px auto 110px auto;
+        padding: 12px 35px;
+        width: 277px;
+    }
+
+    .footing__button {
+        font-size: 1.7em;
+    }
+
+    /* Pages menus */
+
+    .menu__page {
+        margin: auto auto 150px auto;
+        width: 70%;
+        max-width: 750px;
+        padding: 45px;
+
+        &--title {
+            width: 50%;
+        }
+    }
+
+    .heading {
+        margin-bottom: 50px;
+
+        &__title {
+            font-size: 3em;
+        }
+    }
+
+
+    .name {
+        font-size: 1.4em;
+    }
+
+    .categories__plates {
+        flex-direction: row;
+        text-align: left;
+        align-items: initial;
+    }
+
+    /* Page d'accueil */
+    .mentions {
+        margin: auto auto 150px auto;
+        max-width: 850px;
+    }
+
+    .footing {
+        /*width: 96%;
+		padding: 2%;*/
+        &__box {
+            height: 85px;
+        }
+    }
+}
+
+/*     VERSION DESKTOP      */
+@media all and (min-width: 992px) {
+    /* Page d'accueil */
+    .menu {
+        width: 322px;
+        height: 448px;
+        margin: 45px;
+    }
+
+    .menu__title, .menu__link {
+        font-size: 1.9em;
+    }
+
+    .button--points {
+        margin: 15px auto 140px auto;
+    }
+}
